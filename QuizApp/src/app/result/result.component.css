@@ -1,0 +1,13 @@
+img{
+
+width: 30%;
+margin: auto;
+height: auto;
+}
+.result-container{
+
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+

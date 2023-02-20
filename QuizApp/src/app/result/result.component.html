@@ -1,0 +1,49 @@
+
+<div class="container rounded p-4 my-3 border result-container  p-2" >
+  <img src="../../assets/result-removebg-preview.png" alt="result" />
+  <h4 class="mb-3">Congratulations {{ getName() | titlecase }}</h4>
+
+  <div class="summary text-center">
+    <h4>Summary</h4>
+    <p>Total Question :10</p>
+    <p>Marks Scored :{{ result }}</p>
+  </div>
+
+
+
+
+  <div class="answers rounded  border p-3 d-flex justify-content-evenly" style="width: 100%;">
+    <div>
+    <table class="p-2 table">
+      <tr>
+        <th>Actual Answers</th>
+      </tr>
+      <ng-container >
+      <tr *ngFor="let item of ans" >
+        <td>{{item}}</td>
+      </tr>
+    </ng-container>
+    </table>
+
+  </div>
+
+  <div>
+    <table  class="p-2 table">
+      <tr>
+        <th>Your Answers</th>
+      </tr>
+      <ng-container >
+      <tr *ngFor="let item of last" >
+        <td>{{item}}</td>
+      </tr>
+    </ng-container>
+    </table>
+
+  </div>
+
+
+
+</div>
+<button class=" btn btn-info" style="margin-top:10px; " routerLink="/welcome"  >Play Again</button>
+
+</div>
